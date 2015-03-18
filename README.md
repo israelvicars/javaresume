@@ -1,6 +1,8 @@
 # Java Résumé
 
-Recently updated résumé as a working Java file
+Résumé as an executable Java file
+
+Added an HTML version displaying the code and output
 
 Output when compiled and executed:
 
