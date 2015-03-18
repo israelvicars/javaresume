@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<title>Israel Vicars - Resume in Java</title>	
+		<link href="google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+	</head>
+	<body onload="prettyPrint()">
+		<div class="outer-center">
+		<div class="inner-center">
+		<h1>Israel Vicars</h1>
+		<h3>Resume.java</h3>
+		<pre class="prettyprint linenums">
+class Resume {
+  
+  public static void main (String[] arguments) {
+    new Resume();
+  }
+  Resume () {
+    showContactInfo();
+    showProgrammingInfo();
+    showEmploymentInfo();
+    showEducationInfo();
+  }
+  
+  private void showContactInfo () {
+    String fullName = "Israel Samson Vicars";
+    long mobilePhone = +1_734_646_0035L;
+    String email = "me@israelvicars.com";
+    double lattitude = 42.3775564;
+    double longitude = -82.9401358;
+
+    System.out.println(fullName + "\n");
+    System.out.printf("Email: %s\nMobile: %d\n", email, mobilePhone);
+    System.out.printf("Location: %f, %f\n", lattitude, longitude);
+
+  }
+
+  private void showProgrammingInfo () {
+    String programmingTraining = "Grand Circus Java Bootcamp 2015";
+    String[] programmingLanguages = {"Java SE/EE", "JavaScript", "HTML/CSS"};
+    String[] programmingTools = {"Eclipse", "JDK", "Android Studio"};
+    String publicRepositories = "github.com/israelvicars"; 
+		
+    System.out.println("\nProgramming: \n");
+    System.out.printf(" Trained at %s\n", programmingTraining);
+    System.out.printf(" Familiar with these languages: \n");
+    for (String language: programmingLanguages) 
+      System.out.println("  " + language);
+    System.out.printf("\n Familiar with these tools: \n");
+    for (String tool: programmingTools) 
+      System.out.println("  " + tool);
+    System.out.printf("\n  Code samples: %s\n", publicRepositories);
+  }
+	
+  private void showEmploymentInfo () {
+    String professionalProfile = "linkedin.com/in/israelvicars";
+    String[][] experiences = {
+      {"Gravit8", "Partner", "01/2014 - 03/2015"}, 
+      {"Evtron", "COO", "10/2012 - 11/2013"}, 
+      {"Cultivation Capital", "Associate Partner", "02/2012 - 12/2012"},
+      {"AEGIS Prof. Services", "Director of Online Media", "12/2011 - 05/2012"},
+      {"Revenue Trades", "Director of Operations", "01/2011 - 11/2011"},
+      {"Gust.com", "Community Manager", "12/2009 - 07/2011"},
+      {"University of Michigan", "Student Coordinator", "01/2008 - 07/2009"}};
+
+    System.out.println("\nEmployment: ");
+    System.out.printf("\n Professional Profile: %s\n", professionalProfile);
+    System.out.println("\n Positions: ");
+    for (String[] exp : experiences)
+      System.out.printf("  %s at %s (%s)\n", exp[1], exp[0], exp[2]);
+  }
+	
+  private void showEducationInfo () {
+    String college = "University of Michigan";
+    String program = "Interdisciplinary Engineering";
+    int[] attendance = {2003, 2008};
+    String[] focii = {"Industrial & Operations Engineering","Entrepreneurship"};
+		
+    System.out.println("\nEducation: \n");
+    System.out.printf("Attended the %s\n Majored in %s \n Studied from %d to %d\n", 
+      program, college, attendance[0], attendance[1]);
+    System.out.printf(" Technical Focus: %s\n Professional Focus: %s\n", 
+      focii[0], focii[1]);
+  }
+
+}</pre>
+		<h3>Compiled Output</h3>
+<code>
+<p>Israel Samson Vicars</p>
+
+<p>
+Email: me@israelvicars.com<br />
+Mobile: 17346460035<br />
+Location: 42.377556, -82.940136
+</p>
+<p>
+Programming: 
+</p>
+<p>
+&nbsp;Trained at Grand Circus Java Bootcamp 2015<br />
+&nbsp;Familiar with these languages: <br />
+&nbsp;&nbsp;Java SE/EE<br />
+&nbsp;&nbsp;JavaScript<br />
+&nbsp;&nbsp;HTML/CSS
+</p>
+<p>
+&nbsp;Familiar with these tools: <br />
+&nbsp;&nbsp;Eclipse<br />
+&nbsp;&nbsp;JDK<br />
+&nbsp;&nbsp;Android Studio
+</p>
+<p>
+&nbsp;&nbsp;Code samples: github.com/israelvicars
+</p>
+<p>
+Employment: 
+</p>
+<p>
+&nbsp;Professional Profile: linkedin.com/in/israelvicars
+</p>
+<p>
+&nbsp;Positions: <br />
+&nbsp;&nbsp;Partner at Gravit8 (01/2014 - 03/2015)<br />
+&nbsp;&nbsp;COO at Evtron (10/2012 - 11/2013)<br />
+&nbsp;&nbsp;Associate Partner at Cultivation Capital (02/2012 - 12/2012)<br />
+&nbsp;&nbsp;Director of Online Media at AEGIS Prof. Services (12/2011 - 05/2012)<br />
+&nbsp;&nbsp;Director of Operations at Revenue Trades (01/2011 - 11/2011)<br />
+&nbsp;&nbsp;Community Manager at Gust.com (12/2009 - 07/2011)<br />
+&nbsp;&nbsp;Student Coordinator at University of Michigan (01/2008 - 07/2009)
+</p>
+<p>
+Education: 
+</p>
+<p>
+&nbsp;Attended the University of Michigan<br />
+&nbsp;Majored in Interdisciplinary Engineering at the University of Michigan<br />
+&nbsp;Studied from 2003 to 2008<br />
+&nbsp;Technical Focus: Industrial & Operations Engineering<br />
+&nbsp;Professional Focus: Entrepreneurship
+</p>
+</code></div></div>
+	</body>
+</html>
