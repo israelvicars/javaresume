@@ -1,18 +1,29 @@
 class Resume {
 	
-	void contact () {
+	public static void main (String[] arguments) {
+		new Resume();
+	}
+	
+	Resume () {
+		showContactInfo();
+		showProgrammingInfo();
+		showEmploymentInfo();
+		showEducationInfo();
+	}
+	
+	private void showContactInfo () {
 		String fullName = "Israel Samson Vicars";
+		String email = "me@israelvicars.com";
+		long mobilePhone = +1_734_646_0035L;
 		double lattitude = 42.3775564;
 		double longitude = -82.9401358;
-		long mobilePhone = +1_734_646_0035L;
-		String email = "me@israelvicars.com";
 		
 		System.out.println(fullName + "\n");
-		System.out.printf("Location: %f, %f\n", lattitude, longitude);
 		System.out.printf("Email: %s\nMobile: %d\n", email, mobilePhone);
+		System.out.printf("Location: %f, %f\n", lattitude, longitude);
 	}
 
-	void programming () {
+	private void showProgrammingInfo () {
 		String programmingTraining = "Grand Circus Java Bootcamp 2015";
 		String[] programmingLanguages = {"Java SE/EE", "JavaScript", "HTML/CSS"};
 		String[] programmingTools = {"Eclipse", "JDK", "Android Studio"};
@@ -29,7 +40,7 @@ class Resume {
 		System.out.printf("\n  Code samples: %s\n", publicRepositories);
 	}
 	
-	void employment () {
+	private void showEmploymentInfo () {
 		String professionalProfile = "linkedin.com/in/israelvicars";
 		String[][] experiences = {
 				{"Gravit8", "Partner", "01/2014 - 03/2015"}, 
@@ -47,24 +58,16 @@ class Resume {
 				System.out.printf("  %s at %s (%s)\n", exp[1], exp[0], exp[2]);
 	}
 	
-	void education () {
+	private void showEducationInfo () {
 		String college = "University of Michigan";
 		String program = "Interdisciplinary Engineering";
 		int[] attendance = {2003, 2008};
 		String[] focii = {"Industrial & Operations Engineering","Entrepreneurship"};
 		
 		System.out.println("\nEducation: \n");
-		System.out.printf(" Majored in %s at the %s\n Studied from %d to %d\n", 
-				program, college, attendance[0], attendance[1]);
-		System.out.printf(" Technical focus: %s\n Professional focus: %s\n", 
+		System.out.printf(" Attended the %s\n Majored in %s \n Studied from %d to %d\n", 
+				college, program, attendance[0], attendance[1]);
+		System.out.printf(" Technical Focus: %s\n Professional Focus: %s\n", 
 				focii[0], focii[1]);
-	}
-
-	public static void main (String[] arguments) {
-		Resume meetIsraelVicars = new Resume();
-		meetIsraelVicars.contact();
-		meetIsraelVicars.programming();
-		meetIsraelVicars.employment();
-		meetIsraelVicars.education();	
 	}
 }
