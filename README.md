@@ -1,10 +1,6 @@
 # Java Résumé
 
-Résumé as an executable Java file
-
-Added an HTML version displaying the code and output
-
-Output when compiled and executed:
+Résumé as an executable Java file. Try it out: https://repl.it/CBuK/0
 
 ```
 Israel Samson Vicars
